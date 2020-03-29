@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/poll-app/static/css/main.1ee1d649.chunk.css",
+    "main.js": "/poll-app/static/js/main.cfc43661.chunk.js",
+    "main.js.map": "/poll-app/static/js/main.cfc43661.chunk.js.map",
+    "runtime-main.js": "/poll-app/static/js/runtime-main.a0c8f70b.js",
+    "runtime-main.js.map": "/poll-app/static/js/runtime-main.a0c8f70b.js.map",
+    "static/js/2.9a07390b.chunk.js": "/poll-app/static/js/2.9a07390b.chunk.js",
+    "static/js/2.9a07390b.chunk.js.map": "/poll-app/static/js/2.9a07390b.chunk.js.map",
+    "static/js/3.e0167318.chunk.js": "/poll-app/static/js/3.e0167318.chunk.js",
+    "static/js/3.e0167318.chunk.js.map": "/poll-app/static/js/3.e0167318.chunk.js.map",
+    "static/js/4.9cb6c3c4.chunk.js": "/poll-app/static/js/4.9cb6c3c4.chunk.js",
+    "static/js/4.9cb6c3c4.chunk.js.map": "/poll-app/static/js/4.9cb6c3c4.chunk.js.map",
+    "index.html": "/poll-app/index.html",
+    "precache-manifest.2477ebc6f99f45318239559d8bd5bbfe.js": "/poll-app/precache-manifest.2477ebc6f99f45318239559d8bd5bbfe.js",
+    "service-worker.js": "/poll-app/service-worker.js",
+    "static/css/main.1ee1d649.chunk.css.map": "/poll-app/static/css/main.1ee1d649.chunk.css.map",
+    "static/js/2.9a07390b.chunk.js.LICENSE.txt": "/poll-app/static/js/2.9a07390b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0c8f70b.js",
+    "static/js/2.9a07390b.chunk.js",
+    "static/css/main.1ee1d649.chunk.css",
+    "static/js/main.cfc43661.chunk.js"
+  ]
+}
