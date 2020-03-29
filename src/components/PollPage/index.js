@@ -8,7 +8,7 @@ import Choices from "../Choices";
 import Loading from "../Loading";
 
 function PollPage({ action, getId, Firebase }) {
-	const id = getId().id;
+	const id = window.location.href.split("/").pop();
 	const [idVerificationStatus, setStatus] = useState("pending");
 	const [voted, setVoted] = useState(
 		localStorage.getItem(`poll-${id}`) === "1" || false
