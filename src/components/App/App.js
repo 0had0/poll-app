@@ -113,7 +113,7 @@ function App({ Firebase }) {
               <Loading color={state.firstColor} />
             ) : (
               <React.Fragment>
-                <Route exact path="" component={HomePage} />
+                <Route exact path="/" component={HomePage} />
                 <Switch>
                   <Route
                     path="/create"
