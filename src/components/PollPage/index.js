@@ -53,6 +53,7 @@ function PollPage({ action, getId, Firebase }) {
 		case "verified": {
 			return localStorage.getItem(`poll-${id}`) === "1" && voted ? (
 				<React.Fragment>
+					<Text getText={setText => getQuestion(setText, a => a)} />
 					<Text getText={getResult} />
 					<Input id="copyBox" value={window.location.href} />
 					<Button
