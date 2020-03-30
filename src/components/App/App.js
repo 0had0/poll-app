@@ -70,7 +70,7 @@ function App({ Firebase }) {
     let id = await Firebase.addPoll(question);
     setLoading1(false);
     let url = window.location.href.split("/");
-    url[4] = id;
+    url[3] = id;
     window.location.replace(url.join("/"));
   };
 
