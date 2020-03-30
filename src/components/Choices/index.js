@@ -1,5 +1,6 @@
 import React, { useContext, Suspense } from "react";
 import Styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { themeContext } from "../App";
 
@@ -15,7 +16,7 @@ const Wrapper = Styled.div`
 	height:88px;
 `;
 
-const Button = Styled.button`
+const Button = Styled(motion.button)`
 	border:0;
 	background:rgba(0, 0, 0, 0);
 	outline:none
@@ -42,7 +43,11 @@ function Choices({ onClick }) {
 					</svg>
 				}
 			>
-				<Button onClick={() => onClick("y")}>
+				<Button
+					onClick={() => onClick("y")}
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.9 }}
+				>
 					<CheckIcon
 						firstColor={state.firstColor}
 						secondColor={state.secondColor}
@@ -62,7 +67,11 @@ function Choices({ onClick }) {
 					</svg>
 				}
 			>
-				<Button onClick={() => onClick("n")}>
+				<Button
+					onClick={() => onClick("n")}
+					whileHover={{ scale: 1.1 }}
+					whileTap={{ scale: 0.9 }}
+				>
 					<UnCheckIcon
 						firstColor={state.firstColor}
 						secondColor={state.secondColor}

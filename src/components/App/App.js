@@ -70,8 +70,7 @@ function App({ Firebase }) {
     let id = await Firebase.addPoll(question);
     setLoading1(false);
     let url = window.location.href.split("/");
-    url[4] = "#";
-    url[5] = id;
+    url[4] = id;
     window.location.replace(url.join("/"));
   };
 
@@ -126,7 +125,7 @@ function App({ Firebase }) {
                     )}
                   />
                   <Route
-                    path="/poll-app/#/:id"
+                    path="/poll-app/:id"
                     render={() => {
                       return (
                         <PollPage
