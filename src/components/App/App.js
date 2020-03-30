@@ -113,10 +113,10 @@ function App({ Firebase }) {
               <Loading color={state.firstColor} />
             ) : (
               <React.Fragment>
-                <Route exact path="/poll-app" component={HomePage} />
+                <Route exact path="" component={HomePage} />
                 <Switch>
                   <Route
-                    path="/poll-app/create"
+                    path="/create"
                     render={() => (
                       <CreatePage
                         action={q => setQuestion(q)}
@@ -125,7 +125,7 @@ function App({ Firebase }) {
                     )}
                   />
                   <Route
-                    path="/poll-app/:id"
+                    path="/:id"
                     render={() => {
                       return (
                         <PollPage

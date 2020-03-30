@@ -10,7 +10,7 @@ function HomePage() {
 	const checkInput = input => {
 		const re = /http:\/\/0had0\.github\.io\/poll-app\//g; //id
 		if (re.exec(input) !== null) {
-			return input.split("http://0had0.github.io/poll-app/").pop();
+			return input.split("http://0had0.github.io/").pop();
 		} else return input;
 	};
 	return (
@@ -19,11 +19,11 @@ function HomePage() {
 			<Button
 				disabled={checkInput(id) === ""}
 				Component={Link}
-				to={`/poll-app/${id}`}
+				to={`/${id}`}
 			>
 				Enter Poll
 			</Button>
-			<Button Component={Link} to="/poll-app/create">
+			<Button Component={Link} to="/create">
 				Create Poll
 			</Button>
 		</React.Fragment>

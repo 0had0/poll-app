@@ -44,7 +44,7 @@ function PollPage({ action, getId, Firebase }) {
 			return (
 				<React.Fragment>
 					<Text>Invalid Id Or Link</Text>
-					<Button Component={Link} to="/poll-app">
+					<Button Component={Link} to="/">
 						Go Back
 					</Button>
 				</React.Fragment>
@@ -112,9 +112,7 @@ function PollPage({ action, getId, Firebase }) {
 					<Text>Error Occured!</Text>
 					<Button
 						Component={Link}
-						to={`/poll-app/${window.location.href
-							.split("/poll-app/")
-							.pop()}`}
+						to={`/${window.location.href.split("/").pop()}`}
 					>
 						Refresh
 					</Button>
