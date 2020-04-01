@@ -85,6 +85,22 @@ class Firebase {
 				setStatus("error");
 			});
 	}
+	async getPollWithId(id) {
+		let data = {};
+		data = await this.db
+			.collection("polls")
+			.doc(id)
+			.get()
+			.then(doc => {
+				if (doc.exists) return doc.data();
+			})
+			.catch(error => {
+				console.log(error);
+				return { question: "Invalid ID or Error Ocured", error };
+			});
+		console.log(data);
+		if (data !== {}) return data;
+	}
 	async giveMeThePollWithId(id, setText, setCanVote, status) {
 		let data = {};
 		data = await this.db

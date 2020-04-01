@@ -10,6 +10,7 @@ import Loading from "../Loading";
 function PollPage({ action, getId, Firebase }) {
 	const id = getId().id;
 	const [idVerificationStatus, setStatus] = useState("pending");
+	const [question, setQuestion] = useState("");
 	const [voted, setVoted] = useState(
 		localStorage.getItem(`poll-${id}`) === "1" || false
 	);
@@ -33,6 +34,7 @@ function PollPage({ action, getId, Firebase }) {
 			await Firebase.checkId(id, setStatus);
 		}
 		checkId();
+		getQuestion(setQuestion, e => e);
 		// eslint-disable-next-line
 	}, []);
 
@@ -62,10 +64,9 @@ function PollPage({ action, getId, Firebase }) {
 								navigator
 									.share({
 										title: "Poll App by Hadi Houssainy",
-										text: "Use this link to vote",
+										text: `${question} \nVote below : \n`,
 										url: window.location.href
 									})
-									.then(() => console.log("Successful share"))
 									.catch(error =>
 										console.log("Error sharing", error)
 									);
